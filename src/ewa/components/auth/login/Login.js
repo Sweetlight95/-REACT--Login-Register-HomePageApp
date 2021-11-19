@@ -3,6 +3,7 @@ import Input from '../../reusables/Input'
 import "./login.css"
 import img from '../../../../assets/background.svg'
 import Button from '../../reusables/Button'
+import Img from '../../../../assets/bottom.svg'
 
 
 const Login = () => {
@@ -29,9 +30,9 @@ const Login = () => {
         <div className = "form_container">
               {inputFields.map((field, index) => <Input key = {index} field = {field} />)}
         </div>
-
+        <img className = "bottom_circle" src = {Img} alt = 'circlebackground'/>
         <Button name = "login"/>
-
+            
         </div>
     )
 }

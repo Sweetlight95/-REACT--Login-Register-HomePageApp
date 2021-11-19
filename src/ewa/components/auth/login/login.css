@@ -1,5 +1,5 @@
 .login_container {
-    background-color: grey;
+    background-color: rgba(99, 182, 45, 0.808);
     width: 20vw;
     height: 90vh;
     padding: 20px;
@@ -52,5 +52,11 @@
 .text_container p {
     color: #004c4c;
     font-size: 12px;
+}
+.bottom_circle {
+    position: absolute;
+    bottom: 5rem;
+    z-index: -1;
+    right: 0;
 }
 
