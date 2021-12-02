@@ -1,4 +1,4 @@
-.login_container {
+.register_container {
     background-color: rgba(99, 182, 45, 0.808);
     width: 20vw;
     height: 90vh;
@@ -6,7 +6,7 @@
     position: relative;
     z-index: 0;
 }
-.login_header {
+.register_header {
     display: flex;
     justify-content: space-between;
     padding: 5px;
@@ -24,7 +24,7 @@
     border: 2px solid white;
   
 }
-.login_header button {
+.register_header button {
     background-color: #004c4c;
     font-weight: bold;
     font-size: 12px;
@@ -40,7 +40,7 @@
     left: 0;
 }
 .form_container {
-    margin-top: 9vmin;
+    margin-top: 4vmin;
 }
 .text_container {
     width: 55%;
@@ -55,7 +55,7 @@
 }
 .bottom_circle {
     position: absolute;
-    bottom: 5rem;
+    bottom: 2rem;
     z-index: -1;
     right: 0;
 }

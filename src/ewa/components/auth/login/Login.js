@@ -6,7 +6,9 @@ import Button from '../../reusables/Button'
 import Img from '../../../../assets/bottom.svg'
 
 
-const Login = () => {
+const Login = (props) => {
+
+    let {setState} = props
     const inputFields = [
         {label: 'Email', placeholder: 'Enter your email'},
         {label: 'Password', placeholder: 'Enter your password'}
@@ -15,8 +17,8 @@ const Login = () => {
         <div className = "login_container">
         <div className = "login_header">
             <div className = "ewa_logo">       
-            </div>
-            <button >
+            </div>.
+            <button onClick = {() => setState("register")}>
                 REGISTER
             </button>
         </div>
