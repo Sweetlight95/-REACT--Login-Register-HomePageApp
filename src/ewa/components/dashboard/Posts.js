@@ -9,4 +9,4 @@ const Posts = () => {
     )
 }
 
-export default Post
+export default Posts

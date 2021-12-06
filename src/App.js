@@ -4,16 +4,18 @@ import Dashboard from "./ewa/views/dashboard/Dashboard";
 import {useState} from "react"
 
 function App() {
-  let value = false;
-  let email = "";
+  let value = false
+  let email = ""
+
   try {
-    email = JSON.parse(localStorage.getItem("userEmail"))
+    email = localStorage.getItem("userEmail")
     if (email !== "" && email !== null) {
-      value = true;
+      console.log(email)
+      value = true
     }
   } catch(error) {
-    email = "";
-    value = false ;
+    email = ""
+    value = false
   }
   const [authenticated, setAuthenticated] = useState(value)
   return (

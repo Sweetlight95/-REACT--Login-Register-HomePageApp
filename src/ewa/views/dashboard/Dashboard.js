@@ -1,9 +1,10 @@
 import React from 'react'
 import Posts from '../../components/dashboard/Posts';
+import './dashboard.css'
 
 const Dashboard = () => {
     return (
-        <div>
+        <div className = "app_container">
             <Posts/>
         </div>
     )

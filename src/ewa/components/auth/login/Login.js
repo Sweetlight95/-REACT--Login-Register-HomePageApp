@@ -1,19 +1,17 @@
-import React from 'react'
+import React, { useState }  from 'react'
 import Input from '../../reusables/Input'
 import "./login.css"
 import img from '../../../../assets/background.svg'
 import Button from '../../reusables/Button'
 import Img from '../../../../assets/bottom.svg'
-import { useState } from "react"
-
 
 const Login = (props) => {
 
     let {setState, setAuthenticated} = props;
 
     const inputFields = [
-        {label: 'Email', placeholder: 'Enter your email'},
-        {label: 'Password', placeholder: 'Enter your password'}
+        {name: "email", label: 'email', placeholder: 'Enter your email'},
+        {name: "password", label: 'password', placeholder: 'Enter your password'}
 ] 
 
 const initialData = {
@@ -23,7 +21,13 @@ const initialData = {
 const [inputData, setInputData] = useState(initialData)
 
 const handleLogin = () => {
-    setAuthenticated(true)
+    if (inputData.email !== ""  && inputData.password !== "") {
+        let email = inputData.email 
+        localStorage.setItem("userEmail", email)
+        setAuthenticated(true)
+} else {
+    alert ("User Info Is Incomplete")
+}
 }
 
 const handleInput = (e) => {
@@ -51,7 +55,6 @@ const handleInput = (e) => {
               onChange = {handleInput} key = {index} field = {field} />)}
         </div>
         <img className = "bottom_circle" src = {Img} alt = 'circlebackground'/>
-        
         <Button name = "login" onClick = {handleLogin}/>
             
         </div>
