@@ -4,15 +4,32 @@ import "./login.css"
 import img from '../../../../assets/background.svg'
 import Button from '../../reusables/Button'
 import Img from '../../../../assets/bottom.svg'
+import { useState } from "react"
 
 
 const Login = (props) => {
 
-    let {setState} = props
+    let {setState, setAuthenticated} = props;
+
     const inputFields = [
         {label: 'Email', placeholder: 'Enter your email'},
         {label: 'Password', placeholder: 'Enter your password'}
 ] 
+
+const initialData = {
+    email: "", password: ""
+}
+
+const [inputData, setInputData] = useState(initialData)
+
+const handleLogin = () => {
+    setAuthenticated(true)
+}
+
+const handleInput = (e) => {
+    let data = {...inputData, [e.target.name]: e.target.value}
+    setInputData(data)
+}
     return (
         <div className = "login_container">
         <div className = "login_header">
@@ -30,10 +47,12 @@ const Login = (props) => {
         </div>
 
         <div className = "form_container">
-              {inputFields.map((field, index) => <Input key = {index} field = {field} />)}
+              {inputFields.map((field, index) => <Input value = {inputData[field.name]}
+              onChange = {handleInput} key = {index} field = {field} />)}
         </div>
         <img className = "bottom_circle" src = {Img} alt = 'circlebackground'/>
-        <Button name = "login"/>
+        
+        <Button name = "login" onClick = {handleLogin}/>
             
         </div>
     )

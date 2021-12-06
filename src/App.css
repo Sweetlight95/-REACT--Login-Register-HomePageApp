@@ -17,19 +17,19 @@
   font-size: 11px;
   padding-left: 5%;
   width: 95%;
-  height: 45px;
+  height: 30px;
   border-radius: 4px;
   margin-top: 2px;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   background-color: #e8fffc;
 }
 .auth_button {
   background-color: #004c4c;
   color: white;
-  padding: 20px 20px;
+  padding: 12px 20px;
   border-radius: 4px;
   position: absolute;
-  bottom: 2rem;
+  bottom: 1rem;
   box-shadow: none;
   border: none;
   width: 89%;
