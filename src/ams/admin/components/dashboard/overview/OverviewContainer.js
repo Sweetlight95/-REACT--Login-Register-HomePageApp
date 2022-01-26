@@ -1,8 +1,15 @@
 import React from 'react';
-import 
+import Greetings from './Greetings'
+import { Box } from "@chakra-ui/layout"
+import BreadCrumbLink from './BreadCrumbLink';
 
 const OverviewContainer = () => {
-  return <div></div>;
+  return (
+    <Box paddingTop="3%" paddingLeft="9%">
+        <Greetings/>
+        <BreadCrumbLink/>
+    </Box>
+  )
 };
 
 export default OverviewContainer;

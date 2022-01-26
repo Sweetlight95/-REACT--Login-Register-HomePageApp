@@ -5,7 +5,7 @@ import { FaQrcode } from 'react-icons/fa'
 import searching from '../../../../assets/search.svg'
 import boxing from '../../../../assets/box.svg'
 import bell from '../../../../assets/bell.svg'
-import { FiUsers, FiSettings } from 'react-icons/fi'
+import { FiUsers, FiSettings, FiChevronDown } from 'react-icons/fi'
 
 
 const Navbar = () => {
@@ -25,7 +25,7 @@ const Navbar = () => {
         {
             name: "natives",
             route: "/natives",
-            icon: FiUsers
+            icon: FiUsers, FiChevronDown
 
         }, 
         {
