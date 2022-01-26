@@ -6,6 +6,7 @@ import card1 from '../../../../../assets/card1.svg'
 import card2 from '../../../../../assets/card2.svg'
 import card3 from '../../../../../assets/card3.svg'
 import card4 from '../../../../../assets/card4.svg'
+import CardDisplay from './CardDisplay';
 
 
 const OverviewContainer = () => {
@@ -18,27 +19,29 @@ const OverviewContainer = () => {
         },
         {
             img: card2,
-            value: "35,000",
-            text: "All Reg. Natives"
+            value: "13,000",
+            text: "Present Natives"
         },
         {
             img: card3,
-            value: "35,000",
-            text: "All Reg. Natives"
+            value: "22,000",
+            text: "Absent Natives"
         },
         {
             img: card4,
             value: "65%",
-            text: "All Reg. Natives"
+            text: "% Attendance"
         }
     ]
 
   return (
-    <Box paddingTop="3%" paddingLeft="9%">
+    <Box paddingTop="3%" paddingLeft="9%" paddingRight="9%">
         <Greetings/>
         <BreadCrumbLink/>
-        <Box>
-            {}
+        <Box display="flex" justifyContent="space-between" width="100%" >
+            {details.map((detail, index) => (
+                <CardDisplay key={index} cardDetails={detail}/>
+            ))}
         </Box>
     </Box>
   )

@@ -25,8 +25,9 @@ const Navbar = () => {
         {
             name: "natives",
             route: "/natives",
-            icon: FiUsers, FiChevronDown
-
+            icon: FiUsers,
+            icon2: FiChevronDown
+            
         }, 
         {
             name: "settings",
@@ -39,7 +40,7 @@ const Navbar = () => {
             <Text fontSize="16px" fontWeight="bold">Attendance</Text>
             <Box display="flex" justifyContent="space-between" alignItems="center"  height="100%">
                 {routes.map((route, index) => (
-                    <Button onClick={() => setTabIndex(route)} cursor="pointer" key={index} leftIcon={<route.icon/>} p={4} height="100%" bg="white" mr="4rem" color="black" fontsize="14.5px" border="unset"  fontWeight={tabRoute === route.name ? "bold" : "100"} borderBottom={tabRoute === route.name ? "3px solid black" : "none"} width="100%">{route.name}</Button>
+                    <Button onClick={() => setTabIndex(route)} cursor="pointer" key={index} leftIcon={<route.icon/>} rightIcon={<route.icon2/>}  p={4} height="100%" bg="white" mr="4rem" color="black" fontsize="14.5px" border="unset"  fontWeight={tabRoute === route.name ? "bold" : "100"} borderBottom={tabRoute === route.name ? "3px solid black" : "none"} width="100%">{route.name}</Button>
                 ))}
             </Box>
               {/* <Button leftIcon={<FiUsers/>} p={4} height="30px" bg="white" color="black" mx="4rem" fontsize="14px" border="unset" borderBottom="2px solid black" width="100%">Natives</Button>

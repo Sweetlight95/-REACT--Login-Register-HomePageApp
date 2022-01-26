@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Text } from "@chakra-ui/layout"
-import
+import { Image } from "@chakra-ui/imaage"
 
 const CardDisplay = ({ cardDetails }) => {
   return (
