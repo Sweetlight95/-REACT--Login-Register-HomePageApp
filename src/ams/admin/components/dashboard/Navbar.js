@@ -14,31 +14,33 @@ const Navbar = () => {
     const routes = [
         {
             name: "overview",
-            route: "/overview"
+            route: "/overview",
+            icon: FaQrcode
         },
         {
             name: "natives",
-            route: "/natives"
+            route: "/natives",
+            icon: FiUsers
         }, 
         {
             name: "settings",
-            route: "/settings"
-            
+            route: "/settings",
+            icon: FiSettings
         }
     ]
   return (
       <Box display="flex" justifyContent="space-around" alignItems="center">
-          <Text fontSize="16px" fontWeight="bold">
-            Attendance
-          </Text>
-          <Box display="flex" justifyContent="space-around" alignItems="center" width="10%">
-              <Button leftIcon={<FaQrcode/>} p={4} height="30px" bg="white" color="black" fontsize="14px" border="unset" borderBottom="2px solid black" width="100%"> Overview</Button>
-              <Button leftIcon={<FiUsers/>} p={4} height="30px" bg="white" color="black" mx="4rem" fontsize="14px" border="unset" borderBottom="2px solid black" width="100%">Natives</Button>
+            <Text fontSize="16px" fontWeight="bold">
+                Attendance
+            </Text>
+            <Box display="flex" justifyContent="space-around" alignItems="center" width="10%">
+                {routes.map((route, index) => (
+                <Button key={index} leftIcon={<route.icon/>} p={4} height="30px" bg="white" mr="4rem" color="black" fontsize="14px" border="unset" borderBottom="2px solid black" width="100%">{route.name}</Button>
+                ))}
+            </Box>
+              {/* <Button leftIcon={<FiUsers/>} p={4} height="30px" bg="white" color="black" mx="4rem" fontsize="14px" border="unset" borderBottom="2px solid black" width="100%">Natives</Button>
               <Button leftIcon={<FiSettings/>} p={4} height="30px" bg="white" color="black" fontsize="14px" border="unset" borderBottom="2px solid black" width="100%">Settings</Button>
-          </Box>
-           <Box>
-
-           </Box>
+           */}
           <Box>
               <Text fontSize="12px" fontWeight="bold">Hi.</Text>
           </Box>
